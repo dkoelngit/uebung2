@@ -8,13 +8,20 @@ public class h3_main {
         int wartend = 200;
 
         boolean istVoll = false; 
-        
+
+        //  zuerst ermitteln wird ob es überhaupt noch frei Plätze gibt 
+
         if (max <= fix) { 
             istVoll = true;
+            System.out.println("Es gibt keine freien Plätze mehr");
+        } else istVoll = false;
+
+        //  gibt es freie Plätze dann sagen wir das dem Benutzer und sagen ihm wie viele es gibt 
+        
+        int freieplätze = max - fix;
+        if (freieplätze >0) {
+            System.out.println("Es gibt " + freieplätze + " freie Plätze");
         }
 
-        int frei = max - fix;
-        System.out.println(frei);
     }
 }
-// Test commit weil alles aufgeschrieben wird als commit also auf h1 2 unr 3 anstatt nur auf h3 
