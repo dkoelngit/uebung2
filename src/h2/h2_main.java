@@ -2,7 +2,7 @@ package h2;
 
 public class h2_main {
     public static void main(String[] args) {
-        int jahr = 2000;
+        int jahr = 1965;
         boolean schalt = false; 
         
 
