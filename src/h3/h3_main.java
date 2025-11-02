@@ -22,6 +22,12 @@ public class h3_main {
             System.out.println("Es gibt keine freien Plätze mehr");
         } else istVoll = false;
 
+        if (fix > max) {
+            int ueberschuss = fix - max;
+            wartend += ueberschuss;
+            fix = max;
+        }
+
         //  gibt es freie Plätze dann sagen wir das dem Benutzer und sagen ihm wie viele es gibt 
         
         int freieplätze = max - fix;
@@ -46,3 +52,8 @@ public class h3_main {
         System.out.println("Es stehen " + wartend + " Leute auf der Warteliste");
     }
 }
+
+
+//  PROBLEM: Wenn man ausversehen mehr fixplätze vergeben hat also es Plätze im Saal gibt ergibt die Ausgabe nicht so viel sind mit 
+//  "Es gibt 610 Plätze" und "Davon sind 700... vergeben"
+//  Das Problem wurde in line 25-29 gefixt
