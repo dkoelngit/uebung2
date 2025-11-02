@@ -17,3 +17,4 @@ public class h3_main {
         System.out.println(frei);
     }
 }
+// Test commit weil alles aufgeschrieben wird als commit also auf h1 2 unr 3 anstatt nur auf h3 
