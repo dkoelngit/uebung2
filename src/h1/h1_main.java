@@ -3,8 +3,8 @@ package h1;
 public class h1_main {
     public static void main(String[] args) {
         double guthaben = -100;
-        double monEingang = 1000;
-        int rating = 0 ;
+        double monEingang = 200;
+        int rating = -2 ;
 
         boolean warnhinweis;
         boolean negativ = false;
@@ -21,7 +21,7 @@ public class h1_main {
         
         // Da wir den absoluten Betrag wissen wollen, also ohne Vorzeichen etc. benutzt man Math.abs um diese wegzukürzen 
 
-        else if (guthaben < 0) {
+        if (guthaben < 0) {
             if (Math.abs(monEingang) >= Math.abs(guthaben))
                 rating = rating + 1;
         }   else {

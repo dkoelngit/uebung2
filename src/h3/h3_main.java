@@ -4,8 +4,8 @@ public class h3_main {
     public static void main(String[] args) {
 
         int max = 610; //   Sitzplätze von Hörsaal B 
-        int fix = 200;
-        int wartend = 200;
+        int fix = 70;
+        int wartend = 2000;
 
         boolean istVoll = false; 
         
@@ -17,6 +17,8 @@ public class h3_main {
 
         //  wurden zu viele Fixplätze zugewisen dann gehen die ueberschuessigen auf die Warteliste
 
+        //  Dieser Teil ist nicht wirklich Aufgabenrelevant, kann aösp ausgeklammert werden
+
         if (fix > max) {
             int ueberschuss = fix - max;
             wartend += ueberschuss;
@@ -26,10 +28,10 @@ public class h3_main {
 
         //  dann ermitteln wird ob es überhaupt noch frei Plätze gibt 
 
-        if (max <= fix) { 
+        /* if (max == fix) { 
             istVoll = true;
             System.out.println("Es gibt keine freien Plätze mehr");
-        } else istVoll = false;
+        } else istVoll = false; */
 
         //  gibt es freie Plätze dann sagen wir das dem Benutzer und sagen ihm wie viele es gibt 
         
@@ -48,15 +50,13 @@ public class h3_main {
             wartend -= zuweisen;
         }
         
-        if (fix == max); {
+        if (fix == max) {
             istVoll = true;
             System.out.println("Der Saal ist nun voll");
         }
 
         System.out.println("Es stehen noch " + wartend + " Leute auf der Warteliste");
+
+        System.out.println("Es sitzen jetzt " + fix + " Leute im Saal");
     }
 }
-
-//  PROBLEM: Wenn man ausversehen mehr fixplätze vergeben hat also es Plätze im Saal gibt ergibt die Ausgabe nicht so viel sind mit 
-//  "Es gibt 610 Plätze" und "Davon sind 700... vergeben"
-//  Das Problem wurde in line 25-29 gefixt
