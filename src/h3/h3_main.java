@@ -17,7 +17,7 @@ public class h3_main {
 
         //  wurden zu viele Fixplätze zugewisen dann gehen die ueberschuessigen auf die Warteliste
 
-        //  Dieser Teil ist nicht wirklich Aufgabenrelevant, kann aösp ausgeklammert werden
+        //  Dieser Teil ist nicht wirklich Aufgabenrelevant, kann also ausgeklammert werden
 
         if (fix > max) {
             int ueberschuss = fix - max;
